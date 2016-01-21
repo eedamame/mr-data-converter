@@ -138,11 +138,12 @@ var DataGridRenderer = {
       var row = dataGrid[i];
       outputText += "{";
       for (var j=0; j < numColumns; j++) {
-        if ((headerTypes[j] == "int")||(headerTypes[j] == "float")) {
-          var rowOutput = row[j] || "null";
-        } else {
-          var rowOutput = '"' + ( row[j] || "" ) + '"';
-        };
+        var rowOutput = '"' + ( row[j] || "" ) + '"';
+        //if ((headerTypes[j] == "int")||(headerTypes[j] == "float")) {
+        //  var rowOutput = row[j] || "null";
+        //} else {
+        //  var rowOutput = '"' + ( row[j] || "" ) + '"';
+        //};
   
       outputText += ('"'+headerNames[j] +'"' + ":" + rowOutput );
   
